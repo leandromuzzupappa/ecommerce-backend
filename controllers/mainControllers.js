@@ -1,6 +1,6 @@
 const mainControllers = {
     home: (req, res) => {
-        return res.send("<h1>Pepitos</h1>");
+        return res.send("<h1>inicio</h1>");
     },
 
     faq: (req, res) => {

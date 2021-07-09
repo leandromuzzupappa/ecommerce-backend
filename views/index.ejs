@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include('./default/head') %>
+    </head>
+    <body>
+        <%- include('./components/Header/index') %>
+        <main>
+            <section class="categoryImage">
+                <img
+                    src="/images/banner__categoria.svg"
+                    alt="Categoria pepitos"
+                    title="Categoria pepitos"
+                />
+            </section>
+
+            <section class="gallery">
+                <%- include('./components/Filters/index') %>
+
+                <div class="toolbar">
+                    <p>
+                        Ver
+                        <button data-cols="2">2</button>
+                        <button data-cols="3">3</button>
+                        <button data-cols="4">4</button>
+                    </p>
+                </div>
+
+                <div class="gallery__wrapper" data-col="4">
+                    <%- include('./components/ProductCard/index') %>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

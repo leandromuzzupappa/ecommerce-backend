@@ -1,0 +1,208 @@
+.categoryImage {
+    img {
+        display: block;
+        width: 100%;
+        border: 0;
+    }
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 40px 2rem;
+
+    .filters {
+        width: 300px;
+        padding: 0.8rem 1rem;
+
+        .filters__item {
+            margin-bottom: 1.5rem;
+            height: 23px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .filters__item--open {
+            height: auto;
+
+            .filters__item--head {
+                span::before {
+                    content: "-";
+                }
+            }
+        }
+
+        .filters__item--head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            h4,
+            span {
+                @include font-size(14);
+                letter-spacing: 0.56px;
+                text-transform: uppercase;
+            }
+
+            span {
+                @include font-size(18);
+
+                &::before {
+                    content: "+";
+                }
+            }
+        }
+
+        .filters__item--group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            label {
+                @include font-size(12);
+                text-transform: uppercase;
+                color: $gray1;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .toolbar {
+        position: absolute;
+        top: 40px;
+        right: 2rem;
+
+        p,
+        button {
+            @include font-size(12);
+            color: $gray2;
+        }
+
+        button {
+            position: relative;
+            border: 0;
+            background: none;
+            width: 20px;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 700;
+                color: $primary;
+            }
+
+            &:nth-child(2) {
+                &::after,
+                &::before {
+                    content: "|";
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                }
+
+                &::before {
+                    left: -5px;
+                }
+                &::after {
+                    right: -5px;
+                }
+            }
+        }
+    }
+}
+
+.gallery__wrapper {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+
+    &[data-col="4"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &[data-col="3"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &[data-col="2"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product {
+        border: 1px solid transparent;
+        transition: all 0.2s;
+
+        .product__image {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                display: block;
+                transform-origin: center 60%;
+                object-fit: cover;
+                transition: all 0.5s;
+            }
+        }
+
+        .product__data {
+            padding: 0.8rem 0;
+            text-align: center;
+        }
+
+        .product__data--title {
+            @include font-size(16);
+            font-weight: 400;
+            color: $gray2;
+            margin-bottom: 0.8rem;
+        }
+
+        .product__data--prices {
+            span {
+                position: relative;
+                @include font-size(14);
+                color: $gray2;
+
+                &:nth-child(2) {
+                    margin-left: 1rem;
+                }
+            }
+
+            .product__data--prices-regular-striked::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 1px;
+                background: $black;
+                transform: translate(-50%, -50%) scale(1.2) rotate(-15deg);
+            }
+            .product__data--prices-regular-special {
+                font-weight: 700;
+                color: $black;
+            }
+        }
+
+        &:hover {
+            border: 1px solid $gray3;
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+
+            .product__image {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
