@@ -1,14 +1,14 @@
 <div class="product">
-    <a href="#productName">
+    <a href="#<%= name %>">
         <div class="product__image">
             <img
-                src="/images/Image-2.png"
-                alt="product name"
-                tile="product name"
+                src="/images/<%= image %>"
+                alt="<%= name %>"
+                tile="<%= name %>"
             />
         </div>
         <div class="product__data">
-            <h4 class="product__data--title">product name</h4>
+            <h4 class="product__data--title"><%= name %></h4>
             <div class="product__data--prices">
                 <span
                     class="
@@ -16,7 +16,7 @@
                         product__data--prices-regular-striked
                     "
                 >
-                    $12334
+                    $<%= price %>
                 </span>
                 <span
                     class="
@@ -24,7 +24,7 @@
                         product__data--prices-regular-special
                     "
                 >
-                    $1222
+                    $<%= priceSpecial %>
                 </span>
             </div>
         </div>
