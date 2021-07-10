@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-
-const products = require("../models/");
+const database = require("../db/models");
 
 const catalogController = {
     getOne: (req, res) => {
@@ -49,7 +48,7 @@ const catalogController = {
         let db = fs.readFileSync("database/data.json", { encoding: "utf-8" });
         const allProducts = JSON.parse(JSON.parse(db));
 
-        const __products = await products.findAll();
+        const __products = await database.categories.findAll();
         console.log(__products);
 
         return res.render("pages/gallery", {
