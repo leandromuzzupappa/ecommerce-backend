@@ -1,0 +1,42 @@
+.view__product {
+    .product {
+        &__wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__image {
+            width: 50%;
+            margin-right: 16px;
+
+            img {
+                width: 100%;
+                display: block;
+                border: 0;
+            }
+        }
+
+        &__content {
+            width: 50%;
+            text-align: left;
+        }
+
+        &__name {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        &__price {
+            font-size: 24px;
+            color: #ccc;
+
+            &--special {
+                color: #cc0000;
+            }
+        }
+    }
+}
