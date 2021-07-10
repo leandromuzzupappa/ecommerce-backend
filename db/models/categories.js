@@ -1,13 +1,13 @@
 module.exports = (sequelize, dataTypes) => {
-    return sequelize.define(
-        "categories",
-        {
-            name: {
-                type: dataTypes.STRING,
-            },
+    const tableName = "categories";
+    const tableData = {
+        name: {
+            type: dataTypes.STRING,
         },
-        {
-            timestamps: false,
-        }
-    );
+    };
+    const config = {
+        timestamps: false,
+    };
+
+    return sequelize.define(tableName, tableData, config);
 };

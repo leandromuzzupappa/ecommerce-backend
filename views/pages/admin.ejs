@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" class="view__admin">
+    <head>
+        <%- include('../default/head') %>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <a href="#">
+                    <h1>Administrador</h1>
+                </a>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Listado de productos</h2>
+
+                <ul class="product__list">
+                    <% products.forEach( product => { %>
+                    <!--  -->
+                    <% console.log(products.products.dataValues); %>
+                    <!--  -->
+                    <%- include('../components/ProductRow/index', {product:
+                    products.dataValues}) %>
+                    <!--  -->
+                    <% }) %>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

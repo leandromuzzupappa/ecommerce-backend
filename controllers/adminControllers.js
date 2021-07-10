@@ -1,6 +1,12 @@
+const db = require("../db/models");
+
 const adminControllers = {
-    main: (req, res) => {
-        return res.send("<h1>Dashboard</h1>");
+    main: async (req, res) => {
+        const products = await db.products.findAll();
+
+        return res.render("pages/admin", {
+            products,
+        });
     },
     getOne: (req, res) => {
         return res.send("<h1>Un producto</h1>");

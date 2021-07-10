@@ -44,16 +44,9 @@ const catalogController = {
         });
     },
     getAll: async (req, res) => {
-        // Llamado a la db
-        let db = fs.readFileSync("database/data.json", { encoding: "utf-8" });
-        const allProducts = JSON.parse(JSON.parse(db));
+        const __products = await database.products.findAll();
 
-        const __products = await database.categories.findAll();
-        console.log(__products);
-
-        return res.render("pages/gallery", {
-            products: allProducts,
-        });
+        return res.render("pages/gallery");
     },
 };
 

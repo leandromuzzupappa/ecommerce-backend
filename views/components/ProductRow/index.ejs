@@ -1,0 +1,19 @@
+<li class="product__item">
+    <div class="product__image">
+        <img src="/images/<%= product.image %>" alt="<%= product.name %>" />
+    </div>
+    <h4 class="product__name"><%= product.name %></h4>
+    <p class="product__price"><%= product.price %></p>
+    <p class="product__price--special"><%= product.priceSpecial %></p>
+    <p class="product__stock"><%= product.stock %></p>
+    <p class="product__active"><%= product.isActive %></p>
+    <p class="product__category"><%= product.categoriesId %></p>
+    <div class="product__actions">
+        <a href="/<%= product.id %>/edit" class="product__actions--edit"
+            >Editar</a
+        >
+        <a href="/<%= product.id %>/delete" class="product__actions--delete"
+            >Borrar</a
+        >
+    </div>
+</li>
