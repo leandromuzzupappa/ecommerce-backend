@@ -1,12 +1,10 @@
-<% const products = locals.products; %>
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="view__gallery">
     <head>
-        <%- include('./default/head') %>
+        <%- include('../default/head') %>
     </head>
     <body>
-        <%- include('./components/Header/index') %>
+        <%- include('../components/Header/index') %>
         <main>
             <section class="categoryImage">
                 <img
@@ -17,7 +15,7 @@
             </section>
 
             <section class="gallery">
-                <%- include('./components/Filters/index') %>
+                <%- include('../components/Filters/index') %>
 
                 <div class="toolbar">
                     <p>
@@ -31,7 +29,7 @@
                 <div class="gallery__wrapper" data-col="4">
                     <% products.forEach(product => { %>
                     <!--  -->
-                    <%-include('./components/ProductCard/index', product) %>
+                    <%-include('../components/ProductCard/index', product) %>
                     <!--  -->
                     <% }) %>
                 </div>
