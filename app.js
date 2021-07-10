@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const ejs = require("ejs");
 const app = express();
+const cors = require("cors");
 
 const PORT = 3001;
 app.listen(PORT, () => {
@@ -11,6 +12,9 @@ app.listen(PORT, () => {
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(cors("*"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const mainRoutes = require("./routes/mainRoutes");
 const catalogRoutes = require("./routes/catalogRoutes");

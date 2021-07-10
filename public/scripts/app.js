@@ -55,4 +55,20 @@ window.addEventListener("load", () => {
             priceSpecial: 3490,
         },
     ];
+
+    const productCreate = document.querySelector("#productCreate");
+    if (productCreate) {
+        productCreate.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const FD = new FormData(productCreate);
+
+            fetch("http://localhost:3001/admin/create", {
+                method: "POST",
+                body: FD,
+            }).then((res) => {
+                console.log(res);
+            });
+        });
+    }
 });

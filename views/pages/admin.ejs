@@ -18,10 +18,8 @@
                 <ul class="product__list">
                     <% products.forEach( product => { %>
                     <!--  -->
-                    <% console.log(products.products.dataValues); %>
-                    <!--  -->
                     <%- include('../components/ProductRow/index', {product:
-                    products.dataValues}) %>
+                    product.dataValues}) %>
                     <!--  -->
                     <% }) %>
                 </ul>

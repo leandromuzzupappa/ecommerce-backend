@@ -15,10 +15,12 @@ const adminControllers = {
         return res.send("<h1>Trae todos los produtos</h1>");
     },
     create: (req, res) => {
-        return res.send("<h1>Crear</h1>");
+        return res.render("pages/productCreate");
     },
     created: (req, res) => {
-        return res.send("<h1>producto creado</h1>");
+        console.log(req.body);
+
+        return;
     },
     update: (req, res) => {
         return res.send("<h1>producto actualizado</h1>");

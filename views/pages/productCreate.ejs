@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" class="view__admin">
+    <head>
+        <%- include('../default/head') %>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <a href="#">
+                    <h1>Crear producto</h1>
+                </a>
+            </div>
+        </header>
+        <main>
+            <section>
+                <form id="productCreate" action="#">
+                    <div class="formRow">
+                        <label for="productStatus">Estado</label>
+                        <select name="productStatus" id="productStatus">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+
+                    <div class="formRow">
+                        <label for="productName">Nombre</label>
+                        <input
+                            type="text"
+                            id="productName"
+                            name="productName"
+                        />
+                    </div>
+
+                    <div class="formRow">
+                        <label for="productPrice">Precio</label>
+                        <input
+                            type="number"
+                            id="productPrice"
+                            name="productPrice"
+                        />
+                    </div>
+
+                    <div class="formRow">
+                        <label for="productPriceSpecial">Precio especial</label>
+                        <input
+                            type="number"
+                            id="productPriceSpecial"
+                            name="productPriceSpecial"
+                            value="0"
+                        />
+                    </div>
+
+                    <div class="formRow">
+                        <label for="productImage">Image</label>
+                        <input
+                            type="text"
+                            id="productImage"
+                            name="productImage"
+                        />
+                    </div>
+
+                    <div class="formRow">
+                        <label for="productStock">stock</label>
+                        <input
+                            type="number"
+                            id="productStock"
+                            name="productStock"
+                        />
+                    </div>
+
+                    <div class="formRow">
+                        <label for="productStock">stock</label>
+                        <select name="productStatus" id="productStatus">
+                            <option value="0">Default</option>
+                            <option value="1">categoria 1</option>
+                        </select>
+                    </div>
+
+                    <div class="formRow">
+                        <button type="submit">Guardar producto</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

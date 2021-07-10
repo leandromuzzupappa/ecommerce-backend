@@ -41,4 +41,15 @@
             }
         }
     }
+
+    .formRow {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        select,
+        input {
+            padding: 0.5rem;
+        }
+    }
 }
