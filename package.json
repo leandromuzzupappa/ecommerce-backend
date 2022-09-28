@@ -1,17 +1,17 @@
 {
-  "name": "le-pepitous",
+  "name": "ecommerce-backend",
   "version": "1.0.0",
-  "description": "el mejor ecommerce del mudno",
+  "description": "Ecommerce backend",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "algo",
-    "pepitos",
-    "oreos"
+    "nodejs",
+    "expressjs",
+    "ecommerce"
   ],
-  "author": "",
+  "author": "Leandro Muzzupappa",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
